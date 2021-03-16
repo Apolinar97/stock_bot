@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<table style="width:100" id='stockTable'>`
+   <head>
+   </head>
+    <tr>
+       <th>Symbol</th>
+       <th>Open</th>
+       <th>Current</th>
+       <th>Previous Close</th>
+   </tr>
+        {% for key, quote_obj in stocks.items() %}
+       <tr>
+           <td>{{key}}</td>
+           <td>{{quote_obj.o}}</td>
+           <td>{{quote_obj.c}}</td>
+           <td>{{quote_obj.pc}}</td>
+       </tr>
+       {% endfor %}
+</table>
+</html>
